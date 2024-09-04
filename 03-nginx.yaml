@@ -1,5 +1,5 @@
-
-- name: install nginx and run
+# Important for interview
+- name: install nginx and run 
   hosts: web
   become: yes # become sudo access
   tasks:
