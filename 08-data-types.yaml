@@ -16,8 +16,8 @@
       ci: jenkins
       cm: Ansible
   tasks:
-  name: Print the course information
-  ansible.builtin.debug:
-    msg: "I am learning {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}} Topics are: {{topics}}, live is: {{live}} and tools are {{tools}}"    
+  - name: Print the course information
+      ansible.builtin.debug:
+        msg: "I am learning {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}} Topics are: {{topics}}, live is: {{live}} and tools are {{tools}}"    
 
      
