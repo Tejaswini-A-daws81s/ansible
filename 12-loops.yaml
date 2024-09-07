@@ -1,0 +1,12 @@
+- name: loops concept
+  hosts: web
+  become: yes
+  tasks:
+  - name: Install Packages
+    ansible.builtin.package:
+      msg: "Install Package {{ item }}"
+    loop:
+    - mysql
+    - nginx
+    - postfix
+    - httpd 
