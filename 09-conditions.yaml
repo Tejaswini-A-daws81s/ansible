@@ -1,0 +1,17 @@
+- name: Check the given number is greaterthan or lessthan 20
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: number
+    prompt: Please enter the number
+    private: false
+  tasks:
+  - name: "Print the number if the given number is greaterthan 20"
+    ansible.builtin.debug:
+      msg: "Given number is greaterthan 20"
+    when: number | int > 20
+
+  - name: "Print the number if the given number is lessthan 20"
+    ansible.builtin.debug:
+      msg: "Given number is lessthan 20"
+    when: number | int < 20
