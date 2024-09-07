@@ -8,10 +8,10 @@
   tasks:
   - name: "Print the number if the given number is greaterthan 20"
     ansible.builtin.debug:
-      msg: "Given number is greaterthan 20"
+      msg: "Given number {{number}} is greaterthan 20"
     when: number | int > 20
 
   - name: "Print the number if the given number is lessthan 20"
     ansible.builtin.debug:
-      msg: "Given number is lessthan 20"
+      msg: "Given number {{number}} is lessthan 20"
     when: number | int < 20
