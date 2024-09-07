@@ -1,0 +1,10 @@
+-
+
+ name: To print the course information
+  hosts: web
+  vars_files:
+  vars.yaml
+  tasks:
+  - name: Print the course information
+    ansible.builtin.debug:
+      msg: "I am learning {{COURSE}}, TRAINER: {{TRAINER}}, DURATION is: {{DURATION}}"
