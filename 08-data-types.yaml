@@ -1,0 +1,23 @@
+- name: devops course information
+  hosts: local
+  connection: local
+  vars:
+   COURSE: Devops with AWS
+   DURATION: 120 hrs # Number
+   TRAINER: Sivakumar Reddy
+   topics: # List
+   - Linux
+   - Shell
+   - Ansible
+   - Terraform
+   - Kubernets 
+   live: true #boolean
+   tools:  # maps
+      ci: jenkins
+      cm: Ansible
+  tasks:
+  name: Print the course information
+  ansible.builtin.debug:
+   msg: "I am learning {{COURSE}}, Duration is {{DURATION}}, Trainer is {{TRAINER}} Topics are: {{topics}}, live is: {{live}} and tools are {{tools}}"    
+
+     
