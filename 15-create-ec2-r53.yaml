@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    subnet_id: "subnet-07a44d52c20b63949"
+    subnet_id: subnet-07a44d52c20b63949
     sg_id: "sg-084d38e184f842be2"
     ami_id: "ami-09c813fb71547fc4f"
     instances:
